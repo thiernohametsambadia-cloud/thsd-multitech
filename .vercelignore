@@ -3,9 +3,5 @@ query
 start.ps1
 server/.env
 server/data.json
-server/node_modules
-client/node_modules
-client/src
-client/public
 .gitignore
 README.md
