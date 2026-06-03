@@ -4,5 +4,6 @@
   },
   "deploy": {
     "healthcheckPath": "/api/health"
-  }
+  },
+  "$schema": "https://railway.app/railway.schema.json"
 }
