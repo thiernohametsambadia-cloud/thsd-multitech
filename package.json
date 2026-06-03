@@ -11,6 +11,6 @@
     "postinstall": "cd server && npm install"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^10.0.3"
   }
 }
