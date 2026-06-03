@@ -8,7 +8,7 @@
     "dev:server": "cd server && npm start",
     "dev:client": "cd client && npm run dev",
     "install:all": "cd server && npm install && cd ../client && npm install",
-    "build": "echo 'Build complete'"
+    "build": "echo 'Build handled by Vercel'"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

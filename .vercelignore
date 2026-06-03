@@ -1,7 +1,5 @@
 Nouveau dossier
 query
 start.ps1
-server/.env
-server/data.json
 .gitignore
 README.md
