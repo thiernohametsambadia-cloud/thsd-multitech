@@ -1,18 +1,21 @@
 const nodemailer = require('nodemailer');
 
+const EMAIL_USER = process.env.EMAIL_USER || 'thsdmultitech@gmail.com';
+const EMAIL_PASS = process.env.EMAIL_PASS || '102004THSD';
+
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: EMAIL_USER,
+    pass: EMAIL_PASS,
   },
 });
 
 async function sendEmail({ name, email, subject, message }) {
   try {
     await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO,
+      from: `"${name}" <${EMAIL_USER}>`,
+      to: process.env.EMAIL_TO || EMAIL_USER,
       subject: `[THSD Multitech] Nouveau message de ${name}${subject ? ` - ${subject}` : ''}`,
       html: `
         <h2>Nouveau message depuis le site THSD Multitech</h2>
