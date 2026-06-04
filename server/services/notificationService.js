@@ -1,7 +1,11 @@
 const nodemailer = require('nodemailer');
 
 const EMAIL_USER = process.env.EMAIL_USER || 'thsdmultitech@gmail.com';
-const EMAIL_PASS = process.env.EMAIL_PASS || '102004THSD';
+const EMAIL_PASS = process.env.EMAIL_PASS;
+
+if (!EMAIL_PASS) {
+  console.warn('EMAIL_PASS not configured — emails will not be sent');
+}
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
